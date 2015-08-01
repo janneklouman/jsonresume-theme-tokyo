@@ -1,6 +1,6 @@
 ## Uppsala theme for JSON Resume
 By Janne Klouman
 
-## TODO:
+### TODO:
 * Design
 * localization
