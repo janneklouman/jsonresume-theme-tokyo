@@ -1,2 +1,6 @@
-# Tokyo theme for JSON Resume
+## Uppsala theme for JSON Resume
 By Janne Klouman
+
+## TODO:
+* Design
+* localization
