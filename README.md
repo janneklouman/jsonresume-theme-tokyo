@@ -1,2 +1,2 @@
-# Tokyo theme for jsonresume
+# Tokyo theme for JSON Resume
 By Janne Klouman

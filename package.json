@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-boilerplate",
-  "version": "0.1.2",
-  "description": "Boilerplate theme for JSON Resume",
-  "author": "Mattias Erming",
+  "name": "jsonresume-theme-toko",
+  "version": "0.0.1",
+  "description": "Tokyo theme for JSON Resume",
+  "author": "Janne Klouman",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erming/jsonresume-theme-boilerplate"
+    "url": "https://github.com/janneklouman/jsonresume-theme-tokyo"
   },
   "license": "MIT",
   "dependencies": {
