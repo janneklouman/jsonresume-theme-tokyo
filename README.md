@@ -1,6 +1,4 @@
-## Uppsala theme for JSON Resume
-By Janne Klouman
+## Uppsala theme 
+A simple Swedish theme for [JSON Resume](http://jsonresume.org/).
 
-### TODO:
-* Design
-* localization
+[![npm version](https://badge.fury.io/js/jsonresume-theme-uppsala.svg)](http://badge.fury.io/js/jsonresume-theme-uppsala)
