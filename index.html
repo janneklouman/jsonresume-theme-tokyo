@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,500,200,300' rel='stylesheet' type='text/css'>
 
-	<title>Jan Erik Klouman</title>
+	<title>Janne Klouman</title>
 
 	<style>
 	* {
@@ -46,9 +46,40 @@ section {
 
     section h1 {
 
-        font-weight:                 400;
+        font-weight:             400;
 
     }
+
+@media only screen and ( max-device-width: 640px ) {
+
+    .mobile-hide {
+
+        display:                none;
+
+    }
+
+    .mobile-break {
+
+        display:                block;
+
+    }
+
+    section {
+
+        margin:                 30px 0;
+
+    }
+}
+
+.mobile-clearfix:before,
+.mobile-clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.mobile-clearfix:after {
+    clear: both;
+}
 
 #header {
 
@@ -64,31 +95,80 @@ section {
 
     }
 
-    #header .inner h1 {
+        #header .inner .picture {
 
-        font-weight:            200;
-        font-size:              38px;
-        color:                  #0177B4;
+            width:                  110px;
+            height:                 110px;
+            border-radius:          55px;
+            float:                  right;
+            margin:                 -9px 0 0 0;
 
-    }
+        }
 
-    #header .inner h2 {
+        #header .inner .name-and-label {
 
-        font-weight:            300;
-        color:                  #0177B4;
-        margin-top:             -10px;
+            display:                inline-block;
 
-    }
+        }
+
+        #header .inner h1 {
+
+            font-weight:            200;
+            font-size:              38px;
+            color:                  #0177B4;
+
+        }
+
+        #header .inner h2 {
+
+            font-weight:            300;
+            color:                  #0177B4;
+            margin-top:             -10px;
+
+        }
+
+@media only screen and ( max-device-width: 640px ) {
+
+        #header .inner {
+
+            max-width:              100%;
+            padding:                20px 15px;
+
+        }
+
+            #header .inner .picture {
+
+                width:                  40px;
+                height:                 40px;
+                border-radius:          20px;
+                margin:                 8px 0 0 0;
+
+            }
+
+            #header .inner h1 {
+
+                font-size:              24px
+
+            }
+
+            #header .inner h2 {
+
+                font-size:              16px
+
+            }
+
+}
 
 
 #resume {
 
 	margin:                 0 auto;
 	max-width:              720px;
+    padding:                0 15px;
 
 }
 
-#basics {}
+#basics { }
 
     #basics .contact {
 
@@ -106,12 +186,22 @@ section {
 
     }
 
+@media only screen and ( max-device-width: 640px ) {
+
+    #basics .contact strong,
+    #location strong {
+
+        display:                inline-block;
+        line-height:            1.65;
+        width:                  auto;
+        float:                  none;
+
+    }
+
+}
+
 #work,
-#volunteer,
 #education,
-#awards,
-#publications,
-#skill,
 #interests {}
 
     #work .item:not(:first-of-type),
@@ -126,22 +216,33 @@ section {
     #work .name,
     #volunteer .name,
     #education .studyType,
-    #awards .title,
     #publications .name,
     #skills .name,
     #languages .language,
-    #references .name  {
+    #references .name,
+    #interests .name {
 
         font-weight:            500;
         display:                inline-block;
 
     }
 
+    #interests .name:nth-of-type(2n+2) {
+
+        text-align:             center;
+
+    }
+
+    #interests .name:nth-of-type(3n+3) {
+
+        text-align:             right;
+
+    }
+
     #work .date,
     #volunteer .date,
     #education .date,
-    #awards .date,
-    #publications .releaseDate {
+    #awards .date {
 
         float:                  right;
 
@@ -172,33 +273,106 @@ section {
 
     }
 
-    #skills .item,
-    #languages .item {
 
+    #interests .item {
+
+        max-width:              204px;
+        text-align:             justify;
         display:                inline-block;
-        margin-right:           40px;
-        vertical-align:         top;
+        margin-right:           0px;
 
     }
 
-    #skills .level,
-    #languages .fluency {
+    #skills .item,
+    #interests .item:not(:nth-of-type(3n+3)) {
+
+        display:                inline-block;
+        vertical-align:         top;
+        margin-right:           50px;
+
+    }
+
+
+
+    #skills .level {
 
         margin-top:             -7px;
 
     }
 
-    #education .item {
+    #education .item,
+    #languages .item {
 
         margin-bottom:          5px;
 
     }
 
-    .date {
+    .date,
+    #languages .fluency {
 
         font-style:             italic;
 
     }
+
+@media only screen and ( max-device-width: 640px ) {
+
+    #work .position {
+
+        font-size: 15px;
+        font-style: italic;
+
+    }
+
+    #work .date {
+
+        font-size: 15px;
+        float: none;
+        margin-top: -8px;
+        display: block;
+        font-style: normal;
+        margin-bottom: 10px;
+
+    }
+
+    #work .item:not(:first-of-type),
+    #volunteer .item:not(:first-of-type),
+    #awards .item:not(:first-of-type),
+    #publications .item:not(:first-of-type) {
+
+        margin-top: 30px
+
+    }
+
+    #education .institution {
+
+        display:    inline-block
+
+    }
+
+    #education .item:not(:last-of-type) {
+
+        margin-bottom: 20px;
+
+    }
+
+    #interests .item {
+
+        max-width: none;
+        text-align: inherit;
+        margin-right: 0 !important;
+
+    }
+
+    #interests .item:not(:last-of-type),
+    #skills .item:not(:last-of-type) {
+
+        margin-bottom: 20px;
+
+    }
+
+
+
+}
 
 
 
@@ -211,38 +385,40 @@ section {
     <!-- Header -->
     <div id="header">
         <div class="inner">
-            <h1>Jan Erik Klouman</h1>
-            <h2>Front-endutvecklare</h2>
+
+            <div class="name-and-label">
+                <h1>Janne Klouman</h1>
+                <h2>Junior front-endutvecklare</h2>
+            </div>
+
+            <img class="picture" src="https://avatars2.githubusercontent.com/u/9065899?v=3&amp;s=460" alt="" />
+
         </div>
     </div>
 
     <div id="resume">
         <section id="basics">
 
-            <div class="contact">
+            <div class="contact mobile-clearfix">
 
-                <div class="website">
-                    <strong>Hemsida</strong>
-                    <a href="https://www.facebook.com/janneklouman">https://www.facebook.com/janneklouman</a>
-                </div>
 
                 <div class="email">
                     <strong>E-mailadress</strong>
-                    jeklouman@gmail.com
-                </div>
-
-                <div class="address">
-                    <strong>Adress</strong>
-                    Middagsvägen 8,
-                    146 32 
-                    Tullinge, 
-                    Stockholm
+                    <span >janne@klouman.com</span>
                 </div>
 
                 <div class="phone">
                     <strong>Telefonnummer</strong>
-                    (+46) 707 941 842
+                    <span>(+46) 707 941 842</span>
                 </div>
+
+                        <div class="address">
+                        <strong class="mobile-clearfix">Adress</strong>
+                        <span class="mobile-break">Middagsvägen 8<span class="mobile-hide">,</span>
+                        <span class="mobile-break">146 32 
+                        Tullinge</span><span class="mobile-hide">, 
+                        Stockholm</span></span>
+                        </div>
 
             </div>
 
@@ -261,9 +437,9 @@ section {
 		<div class="item">
 
             <h3 class="name">
-                                    @Enskild firma
+                                    Enskild firma
             </h3>
-                som Frilansande webbutvecklare.
+                <span class="position"><span class="mobile-hide">som </span>Webbutvecklare.</span>
 
             <div class="date">
 
@@ -289,9 +465,9 @@ section {
 		<div class="item">
 
             <h3 class="name">
-                @<a href="http://www.semantix.se/" title="http://www.semantix.se/">Semantix AB</a>
+                <a href="http://www.semantix.se/" title="http://www.semantix.se/">Semantix AB</a>
             </h3>
-                som Projekttekniker.
+                <span class="position"><span class="mobile-hide">som </span>Projekttekniker.</span>
 
             <div class="date">
 
@@ -307,7 +483,33 @@ section {
 
 
 			<div class="summary">
-				<p>Deltidsjobb då och då vid sidan om studier, samt sommarjobb. Arbetsuppgifter inkluderade teknisk handledning vid översättningsprojekt. Översättningsprojekten varierade väldigt i natur och således även arbetsuppgifterna. Det rörde sig ofta om extrahering av text från filer i olika format (ofta med reguljära uttryck), samt konvertering av filer till översättbara format.</p>
+				<p>Extrajobb då och då vid sidan om studier, samt sommarjobb. Arbetsuppgifter inkluderade teknisk handledning vid översättningsprojekt. Översättningsprojekten varierade väldigt i natur och således även arbetsuppgifterna. Det rörde sig ofta om extrahering av text från filer i olika format (ofta med reguljära uttryck), samt konvertering av filer till översättbara format.</p>
+			</div>
+
+
+		</div>
+		<div class="item">
+
+            <h3 class="name">
+                <a href="http://gengoworld.com/" title="http://gengoworld.com/">こども英語のGengoWorld!</a>
+            </h3>
+                <span class="position"><span class="mobile-hide">som </span>Engelsklärare.</span>
+
+            <div class="date">
+
+                <span class="startDate">
+                    Maj 2015
+                </span>
+
+                <span class="endDate">
+                    - Aug 2015
+                </span>
+
+            </div>
+
+
+			<div class="summary">
+				<p>Helgjobb i Tokyo som engelsklärare för barn i åldern 2-12 år.</p>
 			</div>
 
 
@@ -320,23 +522,28 @@ section {
 		<h1>Utbildning</h1>
 
 		<div class="item">
+
+            <h4 class="studyType">Japanska</h4>
+
                 <div class="date">
 
                 <span class="startDate">
                     Jan 2011
                 </span>
 
-                    <span class="endDate">- Mar 2011</span>
+                        <span class="endDate">- Mar 2011</span>
 
                 </div>
 
-            <h4 class="studyType">Språkstudier</h4>
-			<span class="institution"> vid ISI Language School</span>
+			<span class="institution"> <span class="mobile-hide">vid </span>ISI Language School</span>
 			<span class="area">, Tokyo</span>
 
 
 		</div>
 		<div class="item">
+
+            <h4 class="studyType">Japanska</h4>
+
                 <div class="date">
 
                 <span class="startDate">
@@ -346,42 +553,45 @@ section {
 
                 </div>
 
-            <h4 class="studyType">Språkstudier</h4>
-			<span class="institution"> vid Högskolan Dalarna</span>
-			<span class="area">, två terminer på distans</span>
+			<span class="institution"> <span class="mobile-hide">vid </span>Högskolan Dalarna</span>
+			<span class="area">, Distans</span>
 
 
 		</div>
 		<div class="item">
+
+            <h4 class="studyType">Systemvetenskap</h4>
+
                 <div class="date">
 
                 <span class="startDate">
                     Sep 2012
                 </span>
 
-                    <span class="endDate">- Jun 2014</span>
+                        <span class="endDate">- Jun 2014</span>
 
                 </div>
 
-            <h4 class="studyType">Kandidatprogram i Systemvetenskap</h4>
-			<span class="institution"> vid Uppsala Universitet</span>
+			<span class="institution"> <span class="mobile-hide">vid </span>Uppsala Universitet</span>
 			
 
 
 		</div>
 		<div class="item">
+
+            <h4 class="studyType">Utbytesstudier</h4>
+
                 <div class="date">
 
                 <span class="startDate">
                     Sep 2014
                 </span>
 
-                    <span class="endDate">- Aug 2015</span>
+                        <span class="endDate">- Aug 2015</span>
 
                 </div>
 
-            <h4 class="studyType">Utbytesstudier</h4>
-			<span class="institution"> vid Keio University</span>
+			<span class="institution"> <span class="mobile-hide">vid </span>Keio University</span>
 			<span class="area">, Tokyo</span>
 
 
@@ -402,18 +612,15 @@ section {
                     Webbutveckling
                 </h4>
 
-                <div class="level">
-                    <em>Mellanliggande</em>
-                </div>
 
                 <ul class="keywords">
                     <li>HTML5</li>
                     <li>CSS</li>
-                    <li>WordPress</li>
+                    <li>WordPress+ACF</li>
                     <li>AngularJS</li>
+                    <li>jQuery</li>
                     <li>SVG</li>
                     <li>l10n</li>
-                    <li>jQuery</li>
                     <li>Reguljära uttryck</li>
                 </ul>
 
@@ -424,9 +631,6 @@ section {
                     Översättningsmiljöer
                 </h4>
 
-                <div class="level">
-                    <em>Mellanliggande</em>
-                </div>
 
                 <ul class="keywords">
                     <li>Trados Studio</li>
@@ -441,11 +645,9 @@ section {
                     Övrigt
                 </h4>
 
-                <div class="level">
-                    <em>Mellanliggande</em>
-                </div>
 
                 <ul class="keywords">
+                    <li>Googla saker</li>
                     <li>Adobe Photoshop</li>
                     <li>Adobe Premiere</li>
                     <li>PHPStorm</li>
@@ -460,39 +662,33 @@ section {
 	</section>
 
 	<section id="languages">
-		<h1>Languages</h1>
+		<h1>Språkkunskaper</h1>
 
 		<div class="item">
 
-			<div class="language">
+			<h4 class="language">
 				Svenska
-			</div>
+			</h4>
 
-			<div class="fluency">
-				<em>Modersmål</em>
-			</div>
+			<span class="fluency">- Modersmål</span>
 
 		</div>
 		<div class="item">
 
-			<div class="language">
+			<h4 class="language">
 				Engelska
-			</div>
+			</h4>
 
-			<div class="fluency">
-				<em>Akademisk</em>
-			</div>
+			<span class="fluency">- Akademisk nivå</span>
 
 		</div>
 		<div class="item">
 
-			<div class="language">
+			<h4 class="language">
 				Japanska
-			</div>
+			</h4>
 
-			<div class="fluency">
-				<em>Högre medelnivå/Avancerad (B1 på CEFR-skala)</em>
-			</div>
+			<span class="fluency">- Högre medelnivå (B1 på CEFR-skala)</span>
 
 		</div>
 
@@ -503,18 +699,34 @@ section {
 
 		<div class="item">
 
-			<div class="name">
+			<h4 class="name">
 				Skapande
-			</div>
+			</h4>
 
 			<ul class="keywords">
-				<li>Webb</li>
-				<li>Video</li>
-				<li>Arduino</li>
-				<li>Foto</li>
-				<li>LEGO</li>
-				<li>Kläder</li>
-				<li>Musik</li>
+				<li>Jag har ett stort intresse för skapande i alla dess former. Utöver webb så älskar jag att jobba med video, Arduino, LEGO, foto, kläder, musik.</li>
+			</ul>
+
+		</div>
+		<div class="item">
+
+			<h4 class="name">
+				Japan
+			</h4>
+
+			<ul class="keywords">
+				<li>Japan har spelat en stor roll i mitt liv, och är ett land som jag är djupt fascinerad av. Språket, maten, kulturen, och människorna ligger mig varmt om hjärtat.</li>
+			</ul>
+
+		</div>
+		<div class="item">
+
+			<h4 class="name">
+				Snowboarding
+			</h4>
+
+			<ul class="keywords">
+				<li>Sedan ung ålder har jag årligen försökt att komma iväg på vintersemester för att åka snowboard.</li>
 			</ul>
 
 		</div>
@@ -527,7 +739,7 @@ section {
 		<div class="item">
 
                 <h4 class="name">
-                    Maria Nilsson
+                    Maria Nilsson.
                 </h4>
 
 			<span class="reference">
