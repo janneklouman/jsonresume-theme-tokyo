@@ -4,335 +4,540 @@
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>Richard Hendriks</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,500,200,300' rel='stylesheet' type='text/css'>
+
+	<title>Jan Erik Klouman</title>
 
 	<style>
-	body {
-	background: #fff;
-	font: 15px Arial, Helvetica, sans-serif;
-	line-height: 1.4;
-	margin: 50px 0;
-	margin-bottom: 100px;
+	* {
+
+    padding:                0;
+    margin:                 0;
+    font-family:            'Roboto', sans-serif;
+    color:                  #5D5D5D;
+
 }
-em {
-	color: #999;
+
+body, html {
+
+	background-color:       #FFFFFF;
+	line-height:            1.65;
+
 }
-p {
-	line-height: 1.4;
+
+strong {
+
+    font-weight:            500;
+
 }
-ul {
-	margin-bottom: 0;
+
+h1,
+h2 {
+
+    color:                  #0177B4;
+
 }
+
 section {
-	margin-bottom: 2em;
+
+    margin:                 50px 0;
+
 }
-blockquote {
-	margin: 0;
-	margin-bottom: 1em;
+
+    section h1 {
+
+        font-weight:                 400;
+
+    }
+
+#header {
+
+    background-color:       #f8f8f8;
+
 }
-.item {
-	margin-bottom: 1em;
-}
+
+    #header .inner {
+
+        max-width:              720px;
+        margin:                 0 auto;
+        padding:                50px 0;
+
+    }
+
+    #header .inner h1 {
+
+        font-weight:            200;
+        font-size:              38px;
+        color:                  #0177B4;
+
+    }
+
+    #header .inner h2 {
+
+        font-weight:            300;
+        color:                  #0177B4;
+        margin-top:             -10px;
+
+    }
+
+
 #resume {
-	margin: 0 auto;
-	max-width: 480px;
-	padding: 0 20px;
+
+	margin:                 0 auto;
+	max-width:              720px;
+
 }
-#basics {
-	margin-bottom: -10px;
-}
-#basics h3 {
-	margin-top: 1.5em;
-}
-#basics .contact strong,
-#location strong {
-	clear: both;
-	float: left;
-	line-height: 1.3;
-	width: 120px;
-}
-#profiles,
-#skills {
-	overflow: hidden;
-}
-#profiles .item,
-#skills .item {
-	float: left;
-	width: 50%;
-}
+
+#basics {}
+
+    #basics .contact {
+
+        margin-left:            0px;
+
+    }
+
+    #basics .contact strong,
+    #location strong {
+
+        clear:                  both;
+        float:                  left;
+        line-height:            1.3;
+        width:                  170px;
+
+    }
+
+#work,
+#volunteer,
+#education,
+#awards,
+#publications,
+#skill,
+#interests {}
+
+    #work .item:not(:first-of-type),
+    #volunteer .item:not(:first-of-type),
+    #awards .item:not(:first-of-type),
+    #publications .item:not(:first-of-type) {
+
+        margin-top: 50px
+
+    }
+
+    #work .name,
+    #volunteer .name,
+    #education .studyType,
+    #awards .title,
+    #publications .name,
+    #skills .name,
+    #languages .language,
+    #references .name  {
+
+        font-weight:            500;
+        display:                inline-block;
+
+    }
+
+    #work .date,
+    #volunteer .date,
+    #education .date,
+    #awards .date,
+    #publications .releaseDate {
+
+        float:                  right;
+
+    }
+
+    #work .highlights,
+    #volunteer .highlights,
+    #education .courses,
+    #skills .keywords {
+
+        padding-left:           25px;
+        margin-top:             5px;
+
+    }
+
+    #work .highlights li,
+    #volunteer .highlights li,
+    #education .courses li,
+    #skills .keywords li {
+
+        margin-top:             1px;
+
+    }
+
+    #interests .keywords li {
+
+        display:                inline-block;
+
+    }
+
+    #skills .item,
+    #languages .item {
+
+        display:                inline-block;
+        margin-right:           40px;
+        vertical-align:         top;
+
+    }
+
+    #skills .level,
+    #languages .fluency {
+
+        margin-top:             -7px;
+
+    }
+
+    #education .item {
+
+        margin-bottom:          5px;
+
+    }
+
+    .date {
+
+        font-style:             italic;
+
+    }
+
 
 
 	</style>
 	
 	</head>
 	<body>
-	
-	<div id="resume">
 
-	<h1>Richard Hendriks</h1>
-	<h2>Programmer</h2>
-	<section id="basics">
-		<div class="contact">
-		<div class="website">
-			<strong>Hemsida</strong>
-			http://richardhendricks.com
-		</div>
-		<div class="email">
-			<strong>Email</strong>
-			richard.hendriks@mail.com
-		</div>
-		<div class="phone">
-			<strong>Phone</strong>
-			(912) 555-4321
-		</div>
-		</div>
-		<div class="summary">
-			<p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</p>
-		</div>
-		<h3>Location</h3>
-		<section id="location">
-			<div class="address">
-				<strong>Address</strong>
-				2712 Broadway St
-			</div>
-			<div class="postalCode">
-				<strong>Postal code</strong>
-				CA 94115
-			</div>
-			<div class="city">
-				<strong>City</strong>
-				San Francisco
-			</div>
-			<div class="countryCode">
-				<strong>Country code</strong>
-				US
-			</div>
-			<div class="region">
-				<strong>Region</strong>
-				California
-			</div>
-		</section>
-		<h3>Profiles</h3>
-		<section id="profiles">
-			<div class="item">
-				<strong class="network">
-					Twitter
-				</strong>
-				<div class="username">
-					neutralthoughts
-				</div>
-			</div>
-			<div class="item">
-				<strong class="network">
-					SoundCloud
-				</strong>
-				<div class="username">
-					dandymusicnl
-				</div>
-				<div class="url">
-					<a href="https://soundcloud.com/dandymusicnl">Link</a>
-				</div>
-			</div>
-		</section>
-	</section>
+
+    <!-- Header -->
+    <div id="header">
+        <div class="inner">
+            <h1>Jan Erik Klouman</h1>
+            <h2>Front-endutvecklare</h2>
+        </div>
+    </div>
+
+    <div id="resume">
+        <section id="basics">
+
+            <div class="contact">
+
+                <div class="website">
+                    <strong>Hemsida</strong>
+                    <a href="https://www.facebook.com/janneklouman">https://www.facebook.com/janneklouman</a>
+                </div>
+
+                <div class="email">
+                    <strong>E-mailadress</strong>
+                    jeklouman@gmail.com
+                </div>
+
+                <div class="address">
+                    <strong>Adress</strong>
+                    Middagsvägen 8,
+                    146 32 
+                    Tullinge, 
+                    Stockholm
+                </div>
+
+                <div class="phone">
+                    <strong>Telefonnummer</strong>
+                    (+46) 707 941 842
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="summary">
+
+                <h1>Kort introduktion</h1>
+                <p>Jag är 25 år och studerar vanligtvis Systemvetenskap vid Uppsala Universitet, men är nyss hemkommen från utbytesstudier vid Keio University i Tokyo, Japan. Jag har bestämt mig för att ta studieuppehåll på obestämd tid för att påbörja min karriär.  Min passion ligger i utveckling, design (innefattandes användarvänlighet, lika väl som grafisk formgivning), samt för skapande och konst i alla dess former. Vid sidan om mina studier har jag frilansat som webbutvecklare och webbdesigner, dessutom även programmerat diverse tjänster och Androidappar för nöjets skull.</p>
+
+        </section>
 
 	<section id="work">
-		<h2>Work</h2>
+		<h1>Arbetslivserfarenhet</h1>
+
 		<div class="item">
-			<h3 class="name">
-				Pied Piper
-			</h3>
-			<div class="date">
-				<span class="startDate">
-					2013-12-01
-				</span>
-				<span class="endDate">
-					- 2014-12-01
-				</span>
-			</div>
-			<div class="position">
-				CEO/President
-			</div>
-			<div class="website">
-				<a href="http://piedpiper.com">http://piedpiper.com</a>
-			</div>
+
+            <h3 class="name">
+                                    @Enskild firma
+            </h3>
+                som Frilansande webbutvecklare.
+
+            <div class="date">
+
+                <span class="startDate">
+                    Mar 2011, pågående
+                </span>
+
+
+            </div>
+
+
 			<div class="summary">
-				<p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
+				<p>Jag har vid sidan om mina universitetsstudier frilansat som webbutvecklare då tillfälle givits. Mestadels åt mindre företag, men även tagit konsultuppdrag hos Stockholmsbaserad reklambyrå och således jobbat med aningen större klienter som Sjölins gymnasium samt Nackademins Näringslivsgymnasium. Några av mina senaste verk:</p>
 			</div>
+
 			<ul class="highlights">
-				<li>Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
-				<li>Successfully won Techcrunch Disrupt</li>
-				<li>Optimized an algorithm that holds the current world record for Weisman Scores</li>
+				<li>Go Muffins, Go! är en vegansk catering- och matfirma i Tokyo. Jag har formgivit och utvecklat dess hemsida http://gomuffinsgo.com/</li>
+				<li>Sjölins Gymnasium är en gymnasieskola i Stockholm. Jag har utvecklat deras hemsida http://www.sjolinsgymnasium.se/. Observera att små ändringar har tillkommit sedan jag utvecklade den (exempelvis popupen på landningssidan).</li>
+				<li>Next Up är en tävling riktad åt åttondeklassare för att inspirera dem till en karriär inom IT-branschen. Jag har utvecklat hemsidan http://nextup.se/. </li>
 			</ul>
+
 		</div>
+		<div class="item">
+
+            <h3 class="name">
+                @<a href="http://www.semantix.se/" title="http://www.semantix.se/">Semantix AB</a>
+            </h3>
+                som Projekttekniker.
+
+            <div class="date">
+
+                <span class="startDate">
+                    Dec 2012
+                </span>
+
+                <span class="endDate">
+                    - Aug 2014
+                </span>
+
+            </div>
+
+
+			<div class="summary">
+				<p>Deltidsjobb då och då vid sidan om studier, samt sommarjobb. Arbetsuppgifter inkluderade teknisk handledning vid översättningsprojekt. Översättningsprojekten varierade väldigt i natur och således även arbetsuppgifterna. Det rörde sig ofta om extrahering av text från filer i olika format (ofta med reguljära uttryck), samt konvertering av filer till översättbara format.</p>
+			</div>
+
+
+		</div>
+
 	</section>
 
-	<section id="volunteer">
-		<h2>Volunteer</h2>
-		<div class="item">
-			<h3 class="company">
-				CoderDojo
-			</h3>
-			<div class="date">
-				<span class="startDate">
-					2012-01-01
-				</span>
-				<span class="endDate">
-					- 2013-01-01
-				</span>
-			</div>
-			<div class="position">
-				Teacher
-			</div>
-			<div class="website">
-				<a href="http://coderdojo.com/">http://coderdojo.com/</a>
-			</div>
-			<div class="summary">
-				<p>Global movement of free coding clubs for young people.</p>
-			</div>
-			<ul class="highlights">
-				<li>Awarded &#x27;Teacher of the Month&#x27;</li>
-			</ul>
-		</div>
-	</section>
 	
 	<section id="education">
-		<h2>Education</h2>
+		<h1>Utbildning</h1>
+
 		<div class="item">
-			<div class="date">
-				<span class="startDate">
-					2011-06-01
-				</span>
-				<span class="endDate">
-					- 2014-01-01
-				</span>
-			</div>
-			<div class="institution">
-				University of Oklahoma
-			</div>
-			<div class="area">
-				Information Technology
-			</div>
-			<div class="studyType">
-				Bachelor
-			</div>
-			<div class="gpa">
-				GPA: 4.0
-			</div>
-			<ul class="courses">
-				<li>DB1101 - Basic SQL</li>
-				<li>CS2011 - Java Introduction</li>
-			</ul>
+                <div class="date">
+
+                <span class="startDate">
+                    Jan 2011
+                </span>
+
+                    <span class="endDate">- Mar 2011</span>
+
+                </div>
+
+            <h4 class="studyType">Språkstudier</h4>
+			<span class="institution"> vid ISI Language School</span>
+			<span class="area">, Tokyo</span>
+
+
 		</div>
+		<div class="item">
+                <div class="date">
+
+                <span class="startDate">
+                    VT 2012, HT 2013
+                </span>
+
+
+                </div>
+
+            <h4 class="studyType">Språkstudier</h4>
+			<span class="institution"> vid Högskolan Dalarna</span>
+			<span class="area">, två terminer på distans</span>
+
+
+		</div>
+		<div class="item">
+                <div class="date">
+
+                <span class="startDate">
+                    Sep 2012
+                </span>
+
+                    <span class="endDate">- Jun 2014</span>
+
+                </div>
+
+            <h4 class="studyType">Kandidatprogram i Systemvetenskap</h4>
+			<span class="institution"> vid Uppsala Universitet</span>
+			
+
+
+		</div>
+		<div class="item">
+                <div class="date">
+
+                <span class="startDate">
+                    Sep 2014
+                </span>
+
+                    <span class="endDate">- Aug 2015</span>
+
+                </div>
+
+            <h4 class="studyType">Utbytesstudier</h4>
+			<span class="institution"> vid Keio University</span>
+			<span class="area">, Tokyo</span>
+
+
+		</div>
+
 	</section>
 	
-	<section id="awards">
-		<h2>Awards</h2>
-		<div class="item">
-			<div class="title">
-				Digital Compression Pioneer Award
-			</div>
-			<div class="date">
-				2014-11-01
-			</div>
-			<div class="awarder">
-				Techcrunch
-			</div>
-			<div class="summary">
-				<p>There is no spoon.</p>
-			</div>
-		</div>
-	</section>
 	
-	<section id="publications">
-		<h2>Publications</h2>
-		<div class="item">
-			<div class="name">
-				Video compression for 3d media
-			</div>
-			<div class="publisher">
-				Hooli
-			</div>
-			<div class="releaseDate">
-				2014-10-01
-			</div>
-			<div class="website">
-				<a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">Link</a>
-			</div>
-			<div class="summary">
-				<p>Innovative middle-out compression algorithm that changes the way we store data.</p>
-			</div>
-		</div>
-	</section>
 	
 	<section id="skills">
-		<h2>Skills</h2>
-		<div class="item">
-			<div class="name">
-				Web Development
-			</div>
-			<div class="level">
-				<em>Master</em>
-			</div>
-			<ul class="keywords">
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>Javascript</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Compression
-			</div>
-			<div class="level">
-				<em>Master</em>
-			</div>
-			<ul class="keywords">
-				<li>Mpeg</li>
-				<li>MP4</li>
-				<li>GIF</li>
-			</ul>
-		</div>
+		<h1>Färdigheter</h1>
+
+        <div class="inner">
+
+            <div class="item">
+
+                <h4 class="name">
+                    Webbutveckling
+                </h4>
+
+                <div class="level">
+                    <em>Mellanliggande</em>
+                </div>
+
+                <ul class="keywords">
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>WordPress</li>
+                    <li>AngularJS</li>
+                    <li>SVG</li>
+                    <li>l10n</li>
+                    <li>jQuery</li>
+                    <li>Reguljära uttryck</li>
+                </ul>
+
+            </div>
+            <div class="item">
+
+                <h4 class="name">
+                    Översättningsmiljöer
+                </h4>
+
+                <div class="level">
+                    <em>Mellanliggande</em>
+                </div>
+
+                <ul class="keywords">
+                    <li>Trados Studio</li>
+                    <li>SDL WorldServer</li>
+                    <li>Passolo</li>
+                </ul>
+
+            </div>
+            <div class="item">
+
+                <h4 class="name">
+                    Övrigt
+                </h4>
+
+                <div class="level">
+                    <em>Mellanliggande</em>
+                </div>
+
+                <ul class="keywords">
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Premiere</li>
+                    <li>PHPStorm</li>
+                    <li>GitHub</li>
+                    <li>Android (Java)</li>
+                </ul>
+
+            </div>
+
+        </div>
+
 	</section>
 
 	<section id="languages">
-		<h2>Languages</h2>
+		<h1>Languages</h1>
+
 		<div class="item">
+
 			<div class="language">
-				English
+				Svenska
 			</div>
+
 			<div class="fluency">
-				<em>Native speaker</em>
+				<em>Modersmål</em>
 			</div>
+
 		</div>
+		<div class="item">
+
+			<div class="language">
+				Engelska
+			</div>
+
+			<div class="fluency">
+				<em>Akademisk</em>
+			</div>
+
+		</div>
+		<div class="item">
+
+			<div class="language">
+				Japanska
+			</div>
+
+			<div class="fluency">
+				<em>Högre medelnivå/Avancerad (B1 på CEFR-skala)</em>
+			</div>
+
+		</div>
+
 	</section>
 
 	<section id="interests">
-		<h2>Interests</h2>
+		<h1>Intressen</h1>
+
 		<div class="item">
+
 			<div class="name">
-				Wildlife
+				Skapande
 			</div>
+
 			<ul class="keywords">
-				<li>Ferrets</li>
-				<li>Unicorns</li>
+				<li>Webb</li>
+				<li>Video</li>
+				<li>Arduino</li>
+				<li>Foto</li>
+				<li>LEGO</li>
+				<li>Kläder</li>
+				<li>Musik</li>
 			</ul>
+
 		</div>
+
 	</section>
-	
+
 	<section id="references">
-		<h2>References</h2>
+		<h1>Referenser</h1>
+
 		<div class="item">
-			<blockquote class="reference">
-				It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.
-			</blockquote>
-			<div class="name">
-				— Erlich Bachman
-			</div>
+
+                <h4 class="name">
+                    Maria Nilsson
+                </h4>
+
+			<span class="reference">
+				Min närmsta chef på Semantix AB. Kontakt: Maria.Nilsson@semantix.se
+			</span>
+
 		</div>
+
 	</section>
-	
+
 	</div>
 	
 	</body>

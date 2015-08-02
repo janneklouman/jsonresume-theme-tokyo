@@ -15,6 +15,13 @@ function render( resume ) {
 
 }
 
+function convertDates() {
+
+    var map = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
+
+
+}
+
 module.exports = {
 	render: render
 };
