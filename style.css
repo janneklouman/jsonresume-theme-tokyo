@@ -153,7 +153,7 @@ section {
 
 	margin:                 0 auto;
 	max-width:              720px;
-    padding:                0 15px;
+    padding:                0 5px 0 15px;
 
 }
 
@@ -313,19 +313,19 @@ section {
 
     #work .position {
 
-        font-size: 15px;
-        font-style: italic;
+        font-size:              15px;
+        font-style:             italic;
 
     }
 
     #work .date {
 
-        font-size: 15px;
-        float: none;
-        margin-top: -8px;
-        display: block;
-        font-style: normal;
-        margin-bottom: 10px;
+        font-size:              15px;
+        float:                  none;
+        margin-top:             -8px;
+        display:                block;
+        font-style:             normal;
+        margin-bottom:          10px;
 
     }
 
@@ -334,39 +334,54 @@ section {
     #awards .item:not(:first-of-type),
     #publications .item:not(:first-of-type) {
 
-        margin-top: 30px
+        margin-top:             30px
 
     }
 
     #education .institution {
 
-        display:    inline-block
+        display:                inline-block
 
     }
 
     #education .item:not(:last-of-type) {
 
-        margin-bottom: 20px;
+        margin-bottom:          20px;
 
     }
 
     #interests .item {
 
-        max-width: none;
-        text-align: inherit;
-        margin-right: 0 !important;
+        max-width:              none;
+        text-align:             inherit;
+        margin-right:           0 !important;
 
     }
 
     #interests .item:not(:last-of-type),
     #skills .item:not(:last-of-type) {
 
-        margin-bottom: 20px;
+        margin-bottom:          20px;
 
     }
 
 
 
 }
+
+#footer {
+
+    background:             #f8f8f8;
+    margin:                 0;
+
+}
+
+    #footer .inner {
+
+        width:                  720px;
+        padding:                50px 5px;
+        margin:                 0 auto;
+
+    }
 
 

@@ -164,7 +164,7 @@ section {
 
 	margin:                 0 auto;
 	max-width:              720px;
-    padding:                0 15px;
+    padding:                0 5px 0 15px;
 
 }
 
@@ -201,7 +201,11 @@ section {
 }
 
 #work,
+#volunteer,
 #education,
+#awards,
+#publications,
+#skill,
 #interests {}
 
     #work .item:not(:first-of-type),
@@ -216,6 +220,7 @@ section {
     #work .name,
     #volunteer .name,
     #education .studyType,
+    #awards .title,
     #publications .name,
     #skills .name,
     #languages .language,
@@ -242,7 +247,8 @@ section {
     #work .date,
     #volunteer .date,
     #education .date,
-    #awards .date {
+    #awards .date,
+    #publications .releaseDate {
 
         float:                  right;
 
@@ -318,19 +324,19 @@ section {
 
     #work .position {
 
-        font-size: 15px;
-        font-style: italic;
+        font-size:              15px;
+        font-style:             italic;
 
     }
 
     #work .date {
 
-        font-size: 15px;
-        float: none;
-        margin-top: -8px;
-        display: block;
-        font-style: normal;
-        margin-bottom: 10px;
+        font-size:              15px;
+        float:                  none;
+        margin-top:             -8px;
+        display:                block;
+        font-style:             normal;
+        margin-bottom:          10px;
 
     }
 
@@ -339,40 +345,55 @@ section {
     #awards .item:not(:first-of-type),
     #publications .item:not(:first-of-type) {
 
-        margin-top: 30px
+        margin-top:             30px
 
     }
 
     #education .institution {
 
-        display:    inline-block
+        display:                inline-block
 
     }
 
     #education .item:not(:last-of-type) {
 
-        margin-bottom: 20px;
+        margin-bottom:          20px;
 
     }
 
     #interests .item {
 
-        max-width: none;
-        text-align: inherit;
-        margin-right: 0 !important;
+        max-width:              none;
+        text-align:             inherit;
+        margin-right:           0 !important;
 
     }
 
     #interests .item:not(:last-of-type),
     #skills .item:not(:last-of-type) {
 
-        margin-bottom: 20px;
+        margin-bottom:          20px;
 
     }
 
 
 
 }
+
+#footer {
+
+    background:             #f8f8f8;
+    margin:                 0;
+
+}
+
+    #footer .inner {
+
+        width:                  720px;
+        padding:                50px 5px;
+        margin:                 0 auto;
+
+    }
 
 
 
@@ -388,7 +409,7 @@ section {
 
             <div class="name-and-label">
                 <h1>Janne Klouman</h1>
-                <h2>Junior front-endutvecklare</h2>
+                <h2>Front-endutvecklare</h2>
             </div>
 
             <img class="picture" src="https://avatars2.githubusercontent.com/u/9065899?v=3&amp;s=460" alt="" />
@@ -412,6 +433,27 @@ section {
                     <span>(+46) 707 941 842</span>
                 </div>
 
+                    <div class="item">
+                        <strong>GitHub</strong>
+
+                        <span><a class="username" href="https://github.com/janneklouman">github.com/janneklouman</a></span>
+                    </div>
+                    <div class="item">
+                        <strong>Facebook</strong>
+
+                        <span><a class="username" href="https://www.facebook.com/janneklouman">facebook.com/janneklouman</a></span>
+                    </div>
+                    <div class="item">
+                        <strong>Vimeo</strong>
+
+                        <span><a class="username" href="https://vimeo.com/user5705728">vimeo.com/user5705728</a></span>
+                    </div>
+                    <div class="item">
+                        <strong>Stack Overflow</strong>
+
+                        <span><a class="username" href="http://stackoverflow.com/u/2298963">stackoverflow/2298963</a></span>
+                    </div>
+
                         <div class="address">
                         <strong class="mobile-clearfix">Adress</strong>
                         <span class="mobile-break">Middagsvägen 8<span class="mobile-hide">,</span>
@@ -427,7 +469,7 @@ section {
         <section id="summary">
 
                 <h1>Kort introduktion</h1>
-                <p>Jag är 25 år och studerar vanligtvis Systemvetenskap vid Uppsala Universitet, men är nyss hemkommen från utbytesstudier vid Keio University i Tokyo, Japan. Jag har bestämt mig för att ta studieuppehåll på obestämd tid för att påbörja min karriär.  Min passion ligger i utveckling, design (innefattandes användarvänlighet, lika väl som grafisk formgivning), samt för skapande och konst i alla dess former. Vid sidan om mina studier har jag frilansat som webbutvecklare och webbdesigner, dessutom även programmerat diverse tjänster och Androidappar för nöjets skull.</p>
+                <p>Min passion ligger i webb- och systemutveckling, design (användarvänlighet, estetik och grafisk formgivning), samt för skapande i alla dess former. Jag är snabb, noggrann, och läraktig. Jag är duktigast inom HTML, CSS, PHP, och WordPress, men jag är även bekväm med JavaScript och har utvecklat i AngularJS, samt för Android. Utöver det har jag jobbat lite med C# i diverse skolarbeten.</p>
 
         </section>
 
@@ -452,13 +494,16 @@ section {
 
 
 			<div class="summary">
-				<p>Jag har vid sidan om mina universitetsstudier frilansat som webbutvecklare då tillfälle givits. Mestadels åt mindre företag, men även tagit konsultuppdrag hos Stockholmsbaserad reklambyrå och således jobbat med aningen större klienter som Sjölins gymnasium samt Nackademins Näringslivsgymnasium. Några av mina senaste verk:</p>
+				<p>Frilansning åt mestadels mindre företag, men jag har även utfört konsultuppdrag hos reklambyrån Rodolfo och således jobbat med aningen större klienter som Sjölins gymnasium samt Nackademins Näringslivsgymnasium. Några av mina projekt:</p>
 			</div>
 
 			<ul class="highlights">
-				<li>Go Muffins, Go! är en vegansk catering- och matfirma i Tokyo. Jag har formgivit och utvecklat dess hemsida http://gomuffinsgo.com/</li>
-				<li>Sjölins Gymnasium är en gymnasieskola i Stockholm. Jag har utvecklat deras hemsida http://www.sjolinsgymnasium.se/. Observera att små ändringar har tillkommit sedan jag utvecklade den (exempelvis popupen på landningssidan).</li>
-				<li>Next Up är en tävling riktad åt åttondeklassare för att inspirera dem till en karriär inom IT-branschen. Jag har utvecklat hemsidan http://nextup.se/. </li>
+				<li>Go Muffins, Go! är en vegansk catering- och matfirma i Tokyo. Jag har formgivit och utvecklat dess hemsida http://gomuffinsgo.com</li>
+				<li>colorhelper är ett sidoprojekt som jag utvecklat på fritiden för att bekanta mig med AngularJS, SVG, samt L10n. http://colorhelper.japmag.net</li>
+				<li>Next Up är en tävling riktad åt åttondeklassare för att inspirera dem till en karriär inom IT-branschen. Jag har utvecklat hemsidan http://nextup.se</li>
+				<li>Sjölins Gymnasium är en gymnasieskola i Stockholm. Jag har utvecklat största delen av hemsidan http://www.sjolinsgymnasium.se</li>
+				<li>Mitt första androidprojekt, skapat åt Emmabodafestivalen 2011. Väl mottaget och finns att hämta här: https://play.google.com/store/apps/details?id=com.spelschema</li>
+				<li>Fler projekt delas gärna vid intresse.</li>
 			</ul>
 
 		</div>
@@ -483,7 +528,7 @@ section {
 
 
 			<div class="summary">
-				<p>Extrajobb då och då vid sidan om studier, samt sommarjobb. Arbetsuppgifter inkluderade teknisk handledning vid översättningsprojekt. Översättningsprojekten varierade väldigt i natur och således även arbetsuppgifterna. Det rörde sig ofta om extrahering av text från filer i olika format (ofta med reguljära uttryck), samt konvertering av filer till översättbara format.</p>
+				<p>Extrajobb då och då vid sidan om studier, samt sommarjobb. Arbetsuppgifterna var väldigt varierande men rörde sig ofta om att konvertera filer till översättbara format, samt om att extrahera text från filer (ofta med hjälp av reguljära uttryck). Jag lärde mig mycket om översättningsprocesser som nu ligger i bakhuvudet när jag utvecklar.</p>
 			</div>
 
 
@@ -509,7 +554,7 @@ section {
 
 
 			<div class="summary">
-				<p>Helgjobb i Tokyo som engelsklärare för barn i åldern 2-12 år.</p>
+				<p>Helgjobb i Tokyo som engelsklärare för barn i åldern 2-12 år. Ett mycket roligt jobb.</p>
 			</div>
 
 
@@ -619,9 +664,6 @@ section {
                     <li>WordPress+ACF</li>
                     <li>AngularJS</li>
                     <li>jQuery</li>
-                    <li>SVG</li>
-                    <li>l10n</li>
-                    <li>Reguljära uttryck</li>
                 </ul>
 
             </div>
@@ -647,10 +689,8 @@ section {
 
 
                 <ul class="keywords">
-                    <li>Googla saker</li>
                     <li>Adobe Photoshop</li>
                     <li>Adobe Premiere</li>
-                    <li>PHPStorm</li>
                     <li>GitHub</li>
                     <li>Android (Java)</li>
                 </ul>
@@ -704,7 +744,7 @@ section {
 			</h4>
 
 			<ul class="keywords">
-				<li>Jag har ett stort intresse för skapande i alla dess former. Utöver webb så älskar jag att jobba med video, Arduino, LEGO, foto, kläder, musik.</li>
+				<li>Jag har ett stort intresse för skapande i alla dess former. Utöver webb och mobil så älskar jag att jobba med video, Arduino, LEGO, foto, kläder, musik.</li>
 			</ul>
 
 		</div>
@@ -715,18 +755,18 @@ section {
 			</h4>
 
 			<ul class="keywords">
-				<li>Japan har spelat en stor roll i mitt liv, och är ett land som jag är djupt fascinerad av. Språket, maten, kulturen, och människorna ligger mig varmt om hjärtat.</li>
+				<li>Japan har spelat en stor roll i mitt liv, och är ett land som jag är djupt fascinerad av. Språket, maten, kulturen, och människorna ligger mig varmt om hjärtat. Jag försöker besöka minst en gång om året.</li>
 			</ul>
 
 		</div>
 		<div class="item">
 
 			<h4 class="name">
-				Snowboarding
+				Spel
 			</h4>
 
 			<ul class="keywords">
-				<li>Sedan ung ålder har jag årligen försökt att komma iväg på vintersemester för att åka snowboard.</li>
+				<li>Sedan ung ålder har jag vart väldigt intresserad av spel. Nu för tiden spelar jag Dota lite då och då och följer tävlingsscenen.</li>
 			</ul>
 
 		</div>
@@ -751,6 +791,17 @@ section {
 	</section>
 
 	</div>
+
+    <section id="footer">
+
+        <div class="inner">
+
+            Driven av <a href="https://jsonresume.org/">JSONResume</a>.<br/>
+            Tema: <a href="https://github.com/janneklouman/jsonresume-theme-uppsala" title="Visa på GitHub">Uppsala</a>, utvecklat av Janne Klouman.
+
+        </div>
+
+    </section>
 	
 	</body>
 </html>

@@ -20,15 +20,21 @@
     <!-- Header -->
     <div id="header">
         <div class="inner">
-            <h1>{{name}}</h1>
-            <h2>{{label}}</h2>
+
+            <div class="name-and-label">
+                <h1>{{name}}</h1>
+                <h2>{{label}}</h2>
+            </div>
+
+            {{#if picture}}<img class="picture" src="{{picture}}" alt="" />{{/if}}
+
         </div>
     </div>
 
     <div id="resume">
         <section id="basics">
 
-            <div class="contact">
+            <div class="contact mobile-clearfix">
 
                 {{#if website}}
                 <div class="website">
@@ -40,28 +46,38 @@
                 {{#if email}}
                 <div class="email">
                     <strong>E-mailadress</strong>
-                    {{email}}
+                    <span >{{email}}</span>
                 </div>
                 {{/if}}
-
-                {{#location}}
-                {{#if address}}
-                <div class="address">
-                    <strong>Adress</strong>
-                    {{address}},
-                    {{#if postalCode}}{{postalCode}} {{/if}}
-                    {{#if city}}{{city}}, {{/if}}
-                    {{#if region}}{{region}}{{/if}}
-                </div>
-                {{/if}}
-                {{/location}}
 
                 {{#if phone}}
                 <div class="phone">
                     <strong>Telefonnummer</strong>
-                    {{phone}}
+                    <span>{{phone}}</span>
                 </div>
                 {{/if}}
+
+                {{#if profiles.length}}
+                {{#each profiles}}
+                    <div class="item">
+                        {{#if network}}<strong>{{network}}</strong>{{/if}}
+
+                        {{#if username}}<span><a class="username" href="{{url}}">{{username}}</a></span>{{/if}}
+                    </div>
+                {{/each}}
+                {{/if}}
+
+                {{#location}}
+                    {{#if address}}
+                        <div class="address">
+                        <strong class="mobile-clearfix">Adress</strong>
+                        <span class="mobile-break">{{address}}<span class="mobile-hide">,</span>
+                        {{#if postalCode}}<span class="mobile-break">{{postalCode}} {{/if}}
+                        {{#if city}}{{city}}</span><span class="mobile-hide">, {{/if}}
+                        {{#if region}}{{region}}{{/if}}</span></span>
+                        </div>
+                    {{/if}}
+                {{/location}}
 
             </div>
 
@@ -86,12 +102,12 @@
 
             {{#if company}}
             <h3 class="name">
-                {{#if website}}@<a href="{{website}}" title="{{website}}">{{company}}</a>
+                {{#if website}}<a href="{{website}}" title="{{website}}">{{company}}</a>
                 {{else}}
-                    @{{company}}
+                    {{company}}
                 {{/if}}
             </h3>
-                {{#if position}}som {{position}}.{{/if}}
+                {{#if position}}<span class="position"><span class="mobile-hide">som </span>{{position}}.</span>{{/if}}
             {{/if}}
 
             {{#if startDate}}
@@ -139,7 +155,7 @@
 		<div class="item">
             {{#if organization}}
                 <h3 class="name">
-                    @{{#if website}}<a href="{{website}}" title="{{website}}">{{organization}}</a>
+                    {{#if website}}<a href="{{website}}" title="{{website}}">{{organization}}</a>
                     {{else}}
                         {{company}}
                     {{/if}}
@@ -189,6 +205,9 @@
 
 		{{#each resume.education}}
 		<div class="item">
+
+            {{#if studyType}}<h4 class="studyType">{{studyType}}</h4>{{/if}}
+
             {{#if startDate}}
                 <div class="date">
 
@@ -197,14 +216,13 @@
                 </span>
 
                     {{#if endDate}}
-                    <span class="endDate">- {{endDate}}</span>
+                        <span class="endDate">- {{endDate}}</span>
                     {{/if}}
 
                 </div>
             {{/if}}
 
-            {{#if studyType}}<h4 class="studyType">{{studyType}}</h4>{{/if}}
-			{{#if institution}}<span class="institution"> vid {{institution}}</span>{{/if}}
+			{{#if institution}}<span class="institution"> <span class="mobile-hide">vid </span>{{institution}}</span>{{/if}}
 			{{#if area}}<span class="area">, {{area}}</span>{{/if}}
 
 			{{#if courses.length}}
@@ -340,22 +358,19 @@
 
 	{{#if resume.languages.length}}
 	<section id="languages">
-		<h1>Languages</h1>
+		<h1>Språkkunskaper</h1>
 
 		{{#each resume.languages}}
 		<div class="item">
 
 			{{#if language}}
-			<div class="language">
+			<h4 class="language">
 				{{language}}
-			</div>
+			</h4>
 			{{/if}}
 
 			{{#if fluency}}
-			<div class="fluency">
-				<em>{{fluency}}</em>
-			</div>
-			{{/if}}
+			<span class="fluency">- {{fluency}}</span>{{/if}}
 
 		</div>
 		{{/each}}
@@ -371,9 +386,9 @@
 		<div class="item">
 
 			{{#if name}}
-			<div class="name">
+			<h4 class="name">
 				{{name}}
-			</div>
+			</h4>
 			{{/if}}
 
 			{{#if keywords.length}}
@@ -416,6 +431,17 @@
 	{{/if}}
 
 	</div>
+
+    <section id="footer">
+
+        <div class="inner">
+
+            Driven av <a href="https://jsonresume.org/">JSONResume</a>.<br/>
+            Tema: <a href="https://github.com/janneklouman/jsonresume-theme-uppsala" title="Visa på GitHub">Uppsala</a>, utvecklat av Janne Klouman.
+
+        </div>
+
+    </section>
 	
 	</body>
 </html>
