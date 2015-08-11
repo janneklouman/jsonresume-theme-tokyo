@@ -3,7 +3,7 @@
 	<head>
 	
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,500,200,300' rel='stylesheet' type='text/css'>
 
 	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
@@ -62,7 +62,7 @@
                     <div class="item">
                         {{#if network}}<strong>{{network}}</strong>{{/if}}
 
-                        {{#if username}}<span><a class="username" href="{{url}}">{{username}}</a></span>{{/if}}
+                        {{#if username}}<span><a class="username" target="_blank" href="{{url}}">{{username}}</a></span>{{/if}}
                     </div>
                 {{/each}}
                 {{/if}}
@@ -434,7 +434,7 @@
 
     <section id="footer">
 
-        <div class="inner">
+        <div class="inner shake">
 
             Driven av <a href="https://jsonresume.org/">JSONResume</a>.<br/>
             Tema: <a href="https://github.com/janneklouman/jsonresume-theme-uppsala" title="Visa på GitHub">Uppsala</a>, utvecklat av Janne Klouman.
